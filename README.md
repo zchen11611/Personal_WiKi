@@ -1,2 +1,2 @@
 # Personal_WiKi
-CS技能积累
+记录鄙人转专业成长
