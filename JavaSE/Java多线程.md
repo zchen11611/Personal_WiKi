@@ -267,29 +267,29 @@ public enum State {
 
 **构造器**
 
-* **Thread()：**创建新的Thread对象
-* **Thread(String name)：**创建线程并指定线程实例名
-* **Thread(Runnable target)：**指定创建线程的目标对象，它实现了Runnable接口中的run方法
-* **Thread(Runnable target, String name)：**创建新的Thread对象
+1. **Thread()：**创建新的Thread对象
+2. **Thread(String name)：**创建线程并指定线程实例名
+3. **Thread(Runnable target)：**指定创建线程的目标对象，它实现了Runnable接口中的run方法
+4. **Thread(Runnable target, String name)：**创建新的Thread对象
 
 **编写线程体和启动线程**
 
-- **public void run()：**子类必须重写run()以编写线程体
-- **public void start()：**启动线程
+1. **public void run()：**子类必须重写run()以编写线程体
+2. **public void start()：**启动线程
 
 ### 获取和设置线程信息相关
 
-- public static Thread currentThread()：这是一个静态方法，总是返回当前在执行的线程对象
+1. public static Thread currentThread()：这是一个静态方法，总是返回当前在执行的线程对象
 
-- public final boolean isAlive()：测试线程是否处于活动状态。如果线程已经启动且尚未终止，则为活动状态。
+2. public final boolean isAlive()：测试线程是否处于活动状态。如果线程已经启动且尚未终止，则为活动状态。
 
-- public final String getName()：getName()方法是Thread的实例方法，该方法返回当前线程对象的名字，可以通过
+3. public final String getName()：getName()方法是Thread的实例方法，该方法返回当前线程对象的名字，可以通过
 
-- public final void setName(String name)：设置该线程名称。除了主线程main之外，其他线程可以在创建时指定线程名称或通过setName(String name)方法设置线程名称，否则依次为Thread-0，Thread-1......等。
+4. public final void setName(String name)：设置该线程名称。除了主线程main之外，其他线程可以在创建时指定线程名称或通过setName(String name)方法设置线程名称，否则依次为Thread-0，Thread-1......等。
 
-- public final int getPriority() ：返回线程优先值
+5. public final int getPriority() ：返回线程优先值
 
-- public final void setPriority(int newPriority) ：改变线程的优先级
+6. public final void setPriority(int newPriority) ：改变线程的优先级
 
   > 每个线程都有一定的优先级，优先级高的线程将获得较多的执行机会。每个线程默认的优先级都与创建它的父线程具有相同的优先级。Thread类提供了setPriority(int newPriority)和getPriority()方法类设置和获取线程的优先级，其中setPriority方法需要一个整数，并且范围在[1,10]之间，通常推荐设置Thread类的三个优先级常量：
   >
